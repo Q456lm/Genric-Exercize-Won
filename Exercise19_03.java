@@ -10,8 +10,7 @@ public class Exercise19_03 {
     
     /**
      * Removes duplicate elements from a list.
-     * 
-     * TODO: Complete this method.
+     *
      * Hint: Create a new ArrayList, iterate through the original list,
      * and add elements that are not already in the new list.
      * Use the contains() method to check for duplicates.
@@ -20,9 +19,13 @@ public class Exercise19_03 {
      * @return a new list with only unique elements
      */
     public static <E> ArrayList<E> removeDuplicates(ArrayList<E> list) {
-        // TODO: Implement this method
-        System.out.println("TODO: removeDuplicates() not implemented yet");
-        return null;
+        ArrayList<E> foundItems = new ArrayList<>();
+        for (E item:list){
+            if (!(foundItems.contains(item))){
+                foundItems.add(item);
+            }
+        }
+        return foundItems;
     }
 
     public static void main(String[] args) {
